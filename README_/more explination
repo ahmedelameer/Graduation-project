@@ -1,0 +1,23 @@
+# Graduation-project
+Title: Wide Area Measurement for Control & Protection using IEDs as Embedded System. 
+ 
+ Description: Adding communication technology to control & protect substations through  large distance or different areas and helping to prevent the worst case of shutting down the power” black out”by understanding IEC 61850-90-5 standard. In process level: Measuring real time data from the systems and synchronizing it with UTC  from GPS, sending data to PMU as synchro phasor data through wireless technology. In Bay level:  Sending data through wireless technology to PDC and different IEDs to take actions to protect and control the system ,the PDC will save & send the data to the next. In station level: Receiving the data to HMI station by displaying the measured data by smart touch screen. 
+ 
+PMU:phasor measurement unit.                PDC:phasor data concantrator.  
+ 
+ 
+ **We simulated two areas as nine bus system:                **control and communication modules:                                         -One slack bus.                                                     -GPS module ”SKM55RM”.      -Current sensor “Acs712”. 
+ -Four bus system for each area .                                   -Smart lcd to represent the data “HKT070DTA-1C”.
+ -Each area loaded with loads                                       -RF module 433mhz transmitter and receiver.                                                                                               -Four AVR Atmega128.                           
+ ** Two AVR Atmega128 micro-controller. 
+ -Each one is representing the PMU for each area of substation. 
+ -receiving the analog measured current from each system through current sensor and make it  as an input for ADC to take the simple digital value represented the health of each system. 
+ -receiving the UTC from GPS and synchronizing the measured current  with time .
+ 
+ ** another AVR Atmega128 micro-controller.
+ Representing the PDC which collect the data and send the smart lcd  to display the values. 
+ ** another AVR Atmega128 micro-controller.
+ Representing the Protection IED  which take action for control and protect the system. . 
+ 
+-All of data will be transmitted through wireless module. 
+  
